@@ -7,7 +7,16 @@ RUN set -ex \
 		pandoc \
 		pandoc-citeproc \
 		texlive-lang-european \
+		texlive-lang-czechslovak \
+		texlive-lang-english \
+		texlive-lang-french \
+		texlive-lang-german \
+		texlive-lang-polish \
+		texlive-lang-portuguese \
+		texlive-lang-spanish \
 		texlive-latex-recommended \
+		texlive-fonts-recommended \
+		lmodern \
 		make \
 	&& rm -rf /var/lib/apt/lists/*
 
