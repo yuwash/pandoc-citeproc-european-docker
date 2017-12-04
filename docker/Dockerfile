@@ -20,5 +20,21 @@ RUN set -ex \
 		make \
 	&& rm -rf /var/lib/apt/lists/*
 
+# for --biblatex rendering
+RUN set -ex \
+	&& apt-get update && apt-get install -y --no-install-recommends \
+		wget \
+		xzdec \
+	&& tlmgr init-usertree \
+	&& tlmgr install \
+		biblatex \
+		etoolbox \
+		logreq \
+		xstring \
+	&& apt-get purge -y --auto-remove \
+		wget \
+		xzdec \
+	&& rm -rf /var/lib/apt/lists/*
+
 # mount your project directory here
 WORKDIR /project
