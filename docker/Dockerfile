@@ -1,4 +1,4 @@
-FROM debian
+FROM openjdk:jre-slim
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
 # make is just extra as I often use it for pandoc
