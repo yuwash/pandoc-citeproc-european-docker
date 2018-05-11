@@ -1,4 +1,4 @@
-FROM yuwash/pandoc-citeproc-european
+FROM yuwash/pandoc-citeproc-european:openjdk-jre-slim
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
 # texlive-font-utils provides epstopdf needed to embed eps in LaTeX
