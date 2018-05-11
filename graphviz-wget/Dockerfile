@@ -1,4 +1,4 @@
-FROM yuwash/pandoc-citeproc-european:graphviz
+FROM yuwash/pandoc-citeproc-european:openjdk-jre-slim-graphviz
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
 RUN set -ex \
