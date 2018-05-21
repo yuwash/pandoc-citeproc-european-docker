@@ -1,7 +1,8 @@
-FROM debian
+FROM debian:stretch-slim
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
-# make is just extra as I often use it for pandoc
+# make, wget are just extra as I often use it for pandoc
+# texlive-font-utils provides epstopdf needed to embed eps in LaTeX
 RUN set -ex \
 	&& apt-get update && apt-get install -y --no-install-recommends \
 		pandoc \
@@ -18,9 +19,13 @@ RUN set -ex \
 		biber \
 		texlive-bibtex-extra \
 		texlive-latex-extra \
+		texlive-science \
 		texlive-fonts-recommended \
+		texlive-font-utils \
+		ghostscript \
 		lmodern \
 		make \
+		wget \
 	&& rm -rf /var/lib/apt/lists/*
 
 # mount your project directory here
