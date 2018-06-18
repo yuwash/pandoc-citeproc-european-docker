@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
 # make, wget are just extra as I often use it for pandoc

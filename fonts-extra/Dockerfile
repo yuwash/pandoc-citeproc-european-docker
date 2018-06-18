@@ -1,4 +1,4 @@
-FROM yuwash/pandoc-citeproc-european
+FROM yuwash/pandoc-citeproc-european:1.19
 LABEL maintainer "Yushin Washio <yuwash at yandex dot com>"
 
 RUN set -ex \
